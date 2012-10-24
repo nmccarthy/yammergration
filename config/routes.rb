@@ -1,4 +1,6 @@
 Yammergration::Application.routes.draw do
+  resources :open_graph_objects
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

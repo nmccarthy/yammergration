@@ -1,0 +1,33 @@
+<%= form_for(@open_graph_object) do |f| %>
+  <% if @open_graph_object.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@open_graph_object.errors.count, "error") %> prohibited this open_graph_object from being saved:</h2>
+
+      <ul>
+      <% @open_graph_object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :object_type %><br />
+    <%= f.text_field :object_type %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

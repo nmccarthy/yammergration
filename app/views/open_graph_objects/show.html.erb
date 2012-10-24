@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @open_graph_object.title %>
+</p>
+
+<p>
+  <b>Object type:</b>
+  <%= @open_graph_object.object_type %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @open_graph_object.image %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @open_graph_object.description %>
+</p>
+
+<p>
+	<script>yam.connect.embedFeed({
+	  container: "#embedded-feed",
+	  network: "salmonellaville.com",
+	  feedType: "open-graph"
+	});</script>
+
+	<script>yam.connect.actionButton({
+	  container: "#embedded-like",
+	  network: "salmonellaville.com",
+	  action: "like"
+	});</script>
+
+	<script>yam.connect.actionButton({
+	  container: "#embedded-follow",
+	  network: "salmonellaville.com",
+	  action: "follow"
+	});</script>
+
+	<div id="embedded-like"></div>
+	<div id="embedded-follow"></div>
+	<div id="embedded-feed"></div>
+</p>
+
+<%= link_to 'Edit', edit_open_graph_object_path(@open_graph_object) %> |
+<%= link_to 'Back', open_graph_objects_path %>

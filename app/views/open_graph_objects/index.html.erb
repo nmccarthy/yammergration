@@ -1,0 +1,29 @@
+<h1>Listing open_graph_objects</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Object type</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @open_graph_objects.each do |open_graph_object| %>
+  <tr>
+    <td><%= open_graph_object.title %></td>
+    <td><%= open_graph_object.object_type %></td>
+    <td><%= open_graph_object.image %></td>
+    <td><%= open_graph_object.description %></td>
+    <td><%= link_to 'Show', open_graph_object %></td>
+    <td><%= link_to 'Edit', edit_open_graph_object_path(open_graph_object) %></td>
+    <td><%= link_to 'Destroy', open_graph_object, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Open graph object', new_open_graph_object_path %>

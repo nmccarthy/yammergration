@@ -1,0 +1,2 @@
+module OpenGraphObjectsHelper
+end
