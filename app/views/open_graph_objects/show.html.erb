@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% content_for :title, @open_graph_object.title %>
+<% content_for :og_site_name, @open_graph_object.og_site_name %>
 
 <p>
   <b>Title:</b>
@@ -8,25 +9,19 @@
 </p>
 
 <p>
-  <b>Object type:</b>
-  <%= @open_graph_object.object_type %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @open_graph_object.image %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @open_graph_object.description %>
+  <b>OG Site Name:</b>
+  <% if @open_graph_object.og_site_name != "" %>
+  	<%= @open_graph_object.og_site_name %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
 </p>
 
 <p>
 	<script>yam.connect.embedFeed({
 	  container: "#embedded-feed",
 	  network: "ognetwork.com",
-	  feedType: "open-graph"
+	  feedType: "open-graph",
 	});</script>
 
 	<script>yam.connect.actionButton({

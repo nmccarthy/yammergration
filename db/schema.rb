@@ -11,15 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024030056) do
+ActiveRecord::Schema.define(:version => 20121024225926) do
 
   create_table "open_graph_objects", :force => true do |t|
     t.string   "title"
     t.string   "object_type"
     t.string   "image"
     t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "og_site_name"
+    t.string   "og_image"
+    t.string   "og_description"
+    t.string   "og_title"
+    t.string   "og_type"
+    t.string   "og_url"
   end
 
 end

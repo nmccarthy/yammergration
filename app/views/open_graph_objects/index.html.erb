@@ -3,9 +3,7 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Object type</th>
-    <th>Image</th>
-    <th>Description</th>
+	<th>OG Site Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,9 +12,7 @@
 <% @open_graph_objects.each do |open_graph_object| %>
   <tr>
     <td><%= open_graph_object.title %></td>
-    <td><%= open_graph_object.object_type %></td>
-    <td><%= open_graph_object.image %></td>
-    <td><%= open_graph_object.description %></td>
+	<td><%= open_graph_object.og_site_name %></td>
     <td><%= link_to 'Show', open_graph_object %></td>
     <td><%= link_to 'Edit', edit_open_graph_object_path(open_graph_object) %></td>
     <td><%= link_to 'Destroy', open_graph_object, method: :delete, data: { confirm: 'Are you sure?' } %></td>

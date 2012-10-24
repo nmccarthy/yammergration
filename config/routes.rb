@@ -1,4 +1,6 @@
 Yammergration::Application.routes.draw do
+  match '/' => 'open_graph_objects#index'
+
   resources :open_graph_objects
 
   # The priority is based upon order of creation:
