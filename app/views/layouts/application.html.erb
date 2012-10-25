@@ -3,6 +3,11 @@
 <head>
   <title><%= yield(:title) %></title>
   <% if yield(:og_site_name) != "" %><meta property="og:site_name" content="<%= yield(:og_site_name) %>"><% end %>
+  <% if yield(:og_image) != "" %><meta property="og:site_name" content="<%= yield(:og_image) %>"><% end %>
+  <% if yield(:og_description) != "" %><meta property="og:site_name" content="<%= yield(:og_description) %>"><% end %>
+  <% if yield(:og_title) != "" %><meta property="og:site_name" content="<%= yield(:og_title) %>"><% end %>
+  <% if yield(:og_type) != "" %><meta property="og:site_name" content="<%= yield(:og_type) %>"><% end %>
+  <% if yield(:og_url) != "" %><meta property="og:site_name" content="<%= yield(:og_url) %>"><% end %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <script data-app-id="hyB2pTvrL36Y50py8EWj6A" src="https://assets.staging.yammer.com/platform/yam.js"></script>

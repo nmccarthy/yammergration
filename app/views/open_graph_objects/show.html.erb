@@ -2,6 +2,11 @@
 
 <% content_for :title, @open_graph_object.title %>
 <% content_for :og_site_name, @open_graph_object.og_site_name %>
+<% content_for :og_image, @open_graph_object.og_image %>
+<% content_for :og_description, @open_graph_object.og_description %>
+<% content_for :og_title, @open_graph_object.og_title %>
+<% content_for :og_type, @open_graph_object.og_type %>
+<% content_for :og_url, @open_graph_object.og_url %>
 
 <p>
   <b>Title:</b>
@@ -16,7 +21,46 @@
 	<em>not specified</em>
   <% end %>
 </p>
-
+<p>
+  <b>OG Image:</b>
+  <% if @open_graph_object.og_image != "" %>
+  	<%= @open_graph_object.og_image %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>OG Description:</b>
+  <% if @open_graph_object.og_description != "" %>
+  	<%= @open_graph_object.og_description %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>OG Title:</b>
+  <% if @open_graph_object.og_title != "" %>
+  	<%= @open_graph_object.og_title %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>OG Type:</b>
+  <% if @open_graph_object.og_type != "" %>
+  	<%= @open_graph_object.og_type %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>OG URL:</b>
+  <% if @open_graph_object.og_url != "" %>
+  	<%= @open_graph_object.og_url %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
 <p>
 	<script>yam.connect.embedFeed({
 	  container: "#embedded-feed",
