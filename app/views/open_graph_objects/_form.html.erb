@@ -11,10 +11,13 @@
     </div>
   <% end %>
 
+<h2>HTML Elements</h2>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+
+<h2>OG Metadata in HTML Head</h2>
   <div class="field">
     <%= f.label :og_site_name %><br />
     <%= f.text_field :og_site_name %>
@@ -39,6 +42,73 @@
     <%= f.label :og_url %><br />
     <%= f.text_field :og_url %>
   </div>
+
+<h2>Embed Like JS Properties</h2>
+  <div class="field">
+    <%= f.label :embedlike_network %><br />
+    <%= f.text_field :embedlike_network %>
+  </div>
+  <div class="field">
+    <%= f.label :embedlike_op_url %><br />
+    <%= f.text_field :embedlike_op_url %>
+  </div>
+  <div class="field">
+    <%= f.label :embedlike_op_type %><br />
+    <%= f.text_field :embedlike_op_type %>
+  </div>
+  <div class="field">
+    <%= f.label :embedlike_op_title %><br />
+    <%= f.text_field :embedlike_op_title %>
+  </div>
+  <div class="field">
+    <%= f.label :embedlike_op_image %><br />
+    <%= f.text_field :embedlike_op_image %>
+  </div>
+
+<h2>Embed Follow JS Properties</h2>
+  <div class="field">
+    <%= f.label :embedfollow_network %><br />
+    <%= f.text_field :embedfollow_network %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfollow_op_url %><br />
+    <%= f.text_field :embedfollow_op_url %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfollow_op_type %><br />
+    <%= f.text_field :embedfollow_op_type %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfollow_op_title %><br />
+    <%= f.text_field :embedfollow_op_title %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfollow_op_image %><br />
+    <%= f.text_field :embedfollow_op_image %>
+  </div>
+
+<h2>Embed Feed JS Properties</h2>
+  <div class="field">
+    <%= f.label :embedfeed_network %><br />
+    <%= f.text_field :embedfeed_network %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfeed_op_url %><br />
+    <%= f.text_field :embedfeed_op_url %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfeed_op_type %><br />
+    <%= f.text_field :embedfeed_op_type %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfeed_op_title %><br />
+    <%= f.text_field :embedfeed_op_title %>
+  </div>
+  <div class="field">
+    <%= f.label :embedfeed_op_image %><br />
+    <%= f.text_field :embedfeed_op_image %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

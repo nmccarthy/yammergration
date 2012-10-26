@@ -8,13 +8,18 @@
 <% content_for :og_type, @open_graph_object.og_type %>
 <% content_for :og_url, @open_graph_object.og_url %>
 
+<%= link_to 'Edit', edit_open_graph_object_path(@open_graph_object) %> |
+<%= link_to 'Back', open_graph_objects_path %>
+
+<h2>HTML Elements</h2>
 <p>
   <b>Title:</b>
   <%= @open_graph_object.title %>
 </p>
 
+<h2>OG Metadata in HTML Head</h2>
 <p>
-  <b>OG Site Name:</b>
+  <b>Og site name:</b>
   <% if @open_graph_object.og_site_name != "" %>
   	<%= @open_graph_object.og_site_name %>
   <% else %>
@@ -22,7 +27,7 @@
   <% end %>
 </p>
 <p>
-  <b>OG Image:</b>
+  <b>Og image:</b>
   <% if @open_graph_object.og_image != "" %>
   	<%= @open_graph_object.og_image %>
   <% else %>
@@ -30,7 +35,7 @@
   <% end %>
 </p>
 <p>
-  <b>OG Description:</b>
+  <b>Og description:</b>
   <% if @open_graph_object.og_description != "" %>
   	<%= @open_graph_object.og_description %>
   <% else %>
@@ -38,7 +43,7 @@
   <% end %>
 </p>
 <p>
-  <b>OG Title:</b>
+  <b>Og title:</b>
   <% if @open_graph_object.og_title != "" %>
   	<%= @open_graph_object.og_title %>
   <% else %>
@@ -46,7 +51,7 @@
   <% end %>
 </p>
 <p>
-  <b>OG Type:</b>
+  <b>Og type:</b>
   <% if @open_graph_object.og_type != "" %>
   	<%= @open_graph_object.og_type %>
   <% else %>
@@ -54,36 +59,191 @@
   <% end %>
 </p>
 <p>
-  <b>OG URL:</b>
+  <b>Og url:</b>
   <% if @open_graph_object.og_url != "" %>
   	<%= @open_graph_object.og_url %>
   <% else %>
 	<em>not specified</em>
   <% end %>
 </p>
+
+<h2>Embed Like JS Properties</h2>
 <p>
-	<script>yam.connect.embedFeed({
-	  container: "#embedded-feed",
-	  network: "ognetwork.com",
-	  feedType: "open-graph",
-	});</script>
+  <b>Embedlike network:</b>
+  <% if @open_graph_object.embedlike_network != "" %>
+  	<%= @open_graph_object.embedlike_network %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedlike op url:</b>
+  <% if @open_graph_object.embedlike_op_url != "" %>
+  	<%= @open_graph_object.embedlike_op_url %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedlike op type:</b>
+  <% if @open_graph_object.embedlike_op_type != "" %>
+  	<%= @open_graph_object.embedlike_op_type %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedlike op title:</b>
+  <% if @open_graph_object.embedlike_op_title != "" %>
+  	<%= @open_graph_object.embedlike_op_title %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedlike op image:</b>
+  <% if @open_graph_object.embedlike_op_image != "" %>
+  	<%= @open_graph_object.embedlike_op_image %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
 
-	<script>yam.connect.actionButton({
-	  container: "#embedded-like",
-	  network: "ognetwork.com",
-	  action: "like"
-	});</script>
-
-	<script>yam.connect.actionButton({
-	  container: "#embedded-follow",
-	  network: "ognetwork.com",
-	  action: "follow"
-	});</script>
-
-	<div id="embedded-like"></div>
-	<div id="embedded-follow"></div>
-	<div id="embedded-feed"></div>
+<h2>Embed Follow JS Properties</h2>
+<p>
+  <b>Embedfollow network:</b>
+  <% if @open_graph_object.embedfollow_network != "" %>
+  	<%= @open_graph_object.embedfollow_network %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfollow op url:</b>
+  <% if @open_graph_object.embedfollow_op_url != "" %>
+  	<%= @open_graph_object.embedfollow_op_url %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfollow op type:</b>
+  <% if @open_graph_object.embedfollow_op_type != "" %>
+  	<%= @open_graph_object.embedfollow_op_type %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfollow op title:</b>
+  <% if @open_graph_object.embedfollow_op_title != "" %>
+  	<%= @open_graph_object.embedfollow_op_title %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfollow op image:</b>
+  <% if @open_graph_object.embedfollow_op_image != "" %>
+  	<%= @open_graph_object.embedfollow_op_image %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_open_graph_object_path(@open_graph_object) %> |
-<%= link_to 'Back', open_graph_objects_path %>
+<h2>Embed Feed JS Properties</h2>
+<p>
+  <b>Embedfeed network:</b>
+  <% if @open_graph_object.embedfeed_network != "" %>
+  	<%= @open_graph_object.embedfeed_network %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfeed op url:</b>
+  <% if @open_graph_object.embedfeed_op_url != "" %>
+  	<%= @open_graph_object.embedfeed_op_url %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfeed op type:</b>
+  <% if @open_graph_object.embedfeed_op_type != "" %>
+  	<%= @open_graph_object.embedfeed_op_type %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfeed op title:</b>
+  <% if @open_graph_object.embedfeed_op_title != "" %>
+  	<%= @open_graph_object.embedfeed_op_title %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+<p>
+  <b>Embedfeed op image:</b>
+  <% if @open_graph_object.embedfeed_op_image != "" %>
+  	<%= @open_graph_object.embedfeed_op_image %>
+  <% else %>
+	<em>not specified</em>
+  <% end %>
+</p>
+
+<div id="embed_stuff">
+	<script>yam.connect.actionButton({
+	  container: "#embed-like",
+	  action: "like",
+	  <% if @open_graph_object.embedlike_network != "" %>network: "<%= @open_graph_object.embedlike_network %>",<% end %>
+
+	  <% if @open_graph_object.embedlike_op_url != "" || @open_graph_object.embedlike_op_type != "" || @open_graph_object.embedlike_op_title != "" || @open_graph_object.embedlike_op_image != "" %>
+	  objectProperties: {
+		<% if @open_graph_object.embedlike_op_url != "" %>url: "<%= @open_graph_object.embedlike_op_url %>",<% end %>
+		<% if @open_graph_object.embedlike_op_type != "" %>type: "<%= @open_graph_object.embedlike_op_type %>",<% end %>
+		<% if @open_graph_object.embedlike_op_title != "" %>title: "<%= @open_graph_object.embedlike_op_title %>",<% end %>
+		<% if @open_graph_object.embedlike_op_image != "" %>image: "<%= @open_graph_object.embedlike_op_image %>",<% end %>
+	  }
+	  <% end %>
+	});</script>
+
+	<script>yam.connect.actionButton({
+	  container: "#embed-follow",
+	  action: "follow",
+	  <% if @open_graph_object.embedfollow_network != "" %>network: "<%= @open_graph_object.embedfollow_network %>",<% end %>
+
+	  <% if @open_graph_object.embedfollow_op_url != "" || @open_graph_object.embedfollow_op_type != "" || @open_graph_object.embedfollow_op_title != "" || @open_graph_object.embedfollow_op_image != "" %>
+	  objectProperties: {
+		<% if @open_graph_object.embedfollow_op_url != "" %>url: "<%= @open_graph_object.embedfollow_op_url %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_type != "" %>type: "<%= @open_graph_object.embedfollow_op_type %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_title != "" %>title: "<%= @open_graph_object.embedfollow_op_title %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_image != "" %>image: "<%= @open_graph_object.embedfollow_op_image %>",<% end %>
+	  }
+	  <% end %>
+	});</script>
+
+	<script>yam.connect.embedFeed({
+	  container: "#embed-feed",
+	  feedType: "open-graph",
+	  <% if @open_graph_object.embedfeed_network != "" %>network: "<%= @open_graph_object.embedfeed_network %>",<% end %>
+
+	  <% if @open_graph_object.embedfeed_op_url != "" || @open_graph_object.embedfeed_op_type != "" || @open_graph_object.embedfeed_op_title != "" || @open_graph_object.embedfeed_op_image != "" %>
+	  objectProperties: {
+		<% if @open_graph_object.embedfeed_op_url != "" %>url: "<%= @open_graph_object.embedfeed_op_url %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_type != "" %>type: "<%= @open_graph_object.embedfeed_op_type %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_title != "" %>title: "<%= @open_graph_object.embedfeed_op_title %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_image != "" %>image: "<%= @open_graph_object.embedfeed_op_image %>",<% end %>
+	  }
+	  <% end %>
+	});</script>
+
+	<h2>Embed Like Button</h2>
+	<div id="embed-like"></div>
+	<h2>Embed Follow Button</h2>
+	<div id="embed-follow"></div>
+	<h2>Embed Object Feed</h2>
+	<div id="embed-feed"></div>
+</div>
