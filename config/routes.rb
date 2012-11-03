@@ -3,6 +3,8 @@ Yammergration::Application.routes.draw do
 
   resources :open_graph_objects
 
+  match '/client_side_flow' => 'pages#client_side_flow'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
