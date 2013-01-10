@@ -2,7 +2,8 @@ Yammergration::Application.routes.draw do
   match '/' => 'pages#home'
   match '/yammer/login' => 'pages#yammer_login'
   match '/facebook/login' => 'pages#facebook_login'
-  match '/facebook/auth_results' => 'pages#facebook_auth_results'
+  match '/twitter/login' => 'pages#twitter_login'
+  match '/google/login' => 'pages#google_login'
   match '/open_graph_objects' => 'open_graph_objects#index'
 
   resources :open_graph_objects
