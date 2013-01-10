@@ -1,9 +1,18 @@
 Yammergration::Application.routes.draw do
-  match '/' => 'open_graph_objects#index'
+  match '/' => 'pages#home'
+  match '/yammer/login' => 'pages#yammer_login'
+  match '/facebook/login' => 'pages#facebook_login'
+  match '/facebook/auth_results' => 'pages#facebook_auth_results'
+  match '/open_graph_objects' => 'open_graph_objects#index'
 
   resources :open_graph_objects
 
   match '/client_side_flow' => 'pages#client_side_flow'
+
+  #Facebook omniauth routes
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
