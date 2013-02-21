@@ -4,7 +4,8 @@ Yammergration::Application.routes.draw do
   match '/facebook/login' => 'pages#facebook_login'
   match '/twitter/login' => 'pages#twitter_login'
   match '/google/login' => 'pages#google_login'
-  match '/open_graph_objects' => 'open_graph_objects#index'
+  # match '/open_graph_objects' => 'open_graph_objects#index'
+  match '/sandbox' => 'pages#sandbox'
 
   resources :open_graph_objects
 

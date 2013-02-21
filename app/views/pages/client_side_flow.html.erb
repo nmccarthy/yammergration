@@ -1,3 +1,83 @@
-<h1>Test</h1>
-<a href="https://www.yammer.com/dialog/oauth?client_id=qCvLgOFdTGwNWejt6v7wg&redirect_uri=http%3A%2F%2Fembedmotron2000.phpfogapp.com&response_type=token">Felonious Link</a>
+<h1>Neil Test</h1>
 
+<!-- Check login status -->
+<!-- <script>
+yam.getLoginStatus(
+	function(response) {
+		if (response.authResponse) {
+			alert("logged in");
+			console.dir(response);
+		}
+		else {
+			alert("logged out");
+		}
+	}
+);
+</script> -->
+
+<!-- Log in -->
+<script>
+yam.getLoginStatus(
+	function(response) {
+		if (response.authResponse) {
+			console.log("logged in");
+			console.dir(response);
+		}
+		else {
+			yam.login(function (response) {
+				if (response.authResponse) {
+					console.dir(response);
+				}
+			});
+		}
+	}
+);
+</script>
+
+<!-- Making a call -->
+<script>
+function handleClick () {
+	yam.getLoginStatus(
+		function(response) {
+			if (response.authResponse) {
+				console.log("logged in");
+				yam.request({
+					url: "https://www.yammer.com/api/v1/messages.json",
+					method: "POST",
+					data: {
+						"body": "@nmccarthy is great",
+						"og_url": "http://www.google.com#vaf18yyysdde"
+					},
+					success: function (users) {
+						alert("The request was successful.");
+						console.dir(users);
+					},
+					error: function (users) {
+						alert("There was an error with the request.");
+					}
+				});
+			}
+			else {
+				alert("not logged in")
+			}
+		}
+	);
+}
+</script>
+
+<!-- Logout -->
+<!-- <script>
+  yam.getLoginStatus(
+    function(response) {
+	  if(response.authResponse) {
+        yam.logout(function (response) {
+          alert("user was logged out");
+        })
+      }
+    }
+  );
+</script> -->
+
+<p><a href="#" onclick="handleClick()">can you hear me?</a></p>
+
+<span id="yammer-login"></span>

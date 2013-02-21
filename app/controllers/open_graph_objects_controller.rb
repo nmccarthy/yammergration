@@ -41,6 +41,7 @@ class OpenGraphObjectsController < ApplicationController
   # POST /open_graph_objects.json
   def create
     @open_graph_object = OpenGraphObject.new(params[:open_graph_object])
+    logger.debug("something amazing")
 
     respond_to do |format|
       if @open_graph_object.save

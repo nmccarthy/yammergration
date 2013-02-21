@@ -16,5 +16,8 @@ class PagesController < ApplicationController
     user = User.find_by_id(params[:user_id])
     @full_auth_blob = user.full_auth_blob
   end
+  
+  def client_side_flow
+  end
 
 end
