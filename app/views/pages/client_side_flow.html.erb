@@ -42,11 +42,11 @@ function handleClick () {
 			if (response.authResponse) {
 				console.log("logged in");
 				yam.request({
-					url: "https://www.yammer.com/api/v1/messages.json",
+					url: "https://www.thunderdome.yammer.com/api/v1/messages.json",
 					method: "POST",
 					data: {
 						"body": "@nmccarthy is great",
-						"og_url": "http://www.google.com#vaf18yyysdde"
+						"og_url": "http://www.google.com#vaf18yyysddeadsdfe"
 					},
 					success: function (users) {
 						alert("The request was successful.");
