@@ -9,6 +9,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :yammer, 
       'bOeqDSuoVig6d914x9HEGw', '3azFh60Pd6MyD7uPNPwxi3PqmJ9m3oVYfqYCcnaC8s',
       {:client_options => {
-        :site => 'https://www.thunderdome.yammer.com'
+        :site => 'https://www.thunderdome.yammer.com',
+        :ssl => {:ca_path => "/etc/ssl/certs"}
       }}
 end
