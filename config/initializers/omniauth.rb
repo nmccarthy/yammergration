@@ -10,6 +10,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       'bOeqDSuoVig6d914x9HEGw', '3azFh60Pd6MyD7uPNPwxi3PqmJ9m3oVYfqYCcnaC8s',
       {:client_options => {
         :site => 'https://www.thunderdome.yammer.com',
-        :ssl => {:ca_path => "/etc/ssl/certs"}
+        :ssl => {:ca_path => "/usr/lib/ssl/certs/ca-certificates.crt"}
       }}
+      
+      
 end
