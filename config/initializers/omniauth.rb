@@ -7,8 +7,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google, '346208846295.apps.googleusercontent.com', 'rwBoXpTfZfY7nNdlj6oscJ2Q'
 
   provider :yammer, 
-      'NI0HGSyTYMKk089OH1r5qw', 'kYLIIj4xoiTtGMQ0JtA3QbRXfXeYgqAij31hWqJwwI0',
+      'bOeqDSuoVig6d914x9HEGw', '3azFh60Pd6MyD7uPNPwxi3PqmJ9m3oVYfqYCcnaC8s',
       {:client_options => {
-        :site => 'https://www.staging.yammer.com'
+        :site => 'https://www.thunderdome.yammer.com'
       }}
 end

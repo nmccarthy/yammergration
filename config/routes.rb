@@ -1,6 +1,7 @@
 Yammergration::Application.routes.draw do
   match '/' => 'pages#home'
   match '/yammer/login' => 'pages#yammer_login'
+  match 'yammer/success' => 'pages#yammer_success'
   match '/facebook/login' => 'pages#facebook_login'
   match '/twitter/login' => 'pages#twitter_login'
   match '/google/login' => 'pages#google_login'

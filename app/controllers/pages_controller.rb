@@ -9,6 +9,10 @@ class PagesController < ApplicationController
   def yammer_login
   end
 
+  def yammer_success
+    @user = User.find(params[:user_id])
+  end
+
   def facebook_login
   end
   
@@ -19,5 +23,5 @@ class PagesController < ApplicationController
   
   def client_side_flow
   end
-
+  
 end
