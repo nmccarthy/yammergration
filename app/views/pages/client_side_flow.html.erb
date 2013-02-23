@@ -42,7 +42,7 @@ function handleClick () {
 			if (response.authResponse) {
 				console.log("logged in");
 				yam.request({
-					url: "https://www.thunderdome.yammer.com/api/v1/messages.json",
+					url: "https://www.staging.yammer.com/api/v1/messages.json",
 					method: "POST",
 					data: {
 						"body": "@nmccarthy is great",
