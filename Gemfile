@@ -8,7 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'omniauth-facebook'
 gem 'omniauth-yammer'
-gem 'omniauth-yammer-staging', :path => "vendor/gems/omniauth-yammer-staging"
+gem 'omniauth-yammer-staging', :git => "https://github.com/nmccarthy/omniauth-yammer-staging.git"
 gem 'omniauth-twitter'
 gem 'omniauth-google'
 

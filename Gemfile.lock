@@ -1,5 +1,6 @@
-PATH
-  remote: vendor/gems/omniauth-yammer-staging
+GIT
+  remote: https://github.com/nmccarthy/omniauth-yammer-staging.git
+  revision: 0353aaed58846753f72e7df60134ab644828b0ea
   specs:
     omniauth-yammer-staging (0.0.1)
       omniauth-oauth2 (>= 1.1)
