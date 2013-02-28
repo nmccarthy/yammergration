@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.name = auth["info"]["full_name"]
-      user.oauth_token = auth["credentials"]["token"]
+      user.oauth_token = auth["credentials"]["token"]      
+      user.name = auth["info"]["full_name"] || auth["info"]["name"] # for yammer prod, the name shows up in full name. maybe difference in strategy versions or something.
     end
   end
 

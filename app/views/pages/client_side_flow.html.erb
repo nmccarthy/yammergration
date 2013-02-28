@@ -1,42 +1,29 @@
-<h1>Neil Test</h1>
-
-<!-- Check login status -->
-<!-- <script>
-yam.getLoginStatus(
-	function(response) {
-		if (response.authResponse) {
-			alert("logged in");
-			console.dir(response);
-		}
-		else {
-			alert("logged out");
-		}
-	}
-);
-</script> -->
+<h1>Javascript API</h1>
 
 <!-- Log in -->
 <script>
-yam.getLoginStatus(
-	function(response) {
-		if (response.authResponse) {
-			console.log("logged in");
-			console.dir(response);
+function logInToYammer() {
+	yam.getLoginStatus(
+		function(response) {
+			if (response.authResponse) {
+				console.log("logged in");
+				console.dir(response);
+			}
+			else {
+				yam.login(function (response) {
+					if (response.authResponse) {
+						console.dir(response);
+					}
+				});
+			}
 		}
-		else {
-			yam.login(function (response) {
-				if (response.authResponse) {
-					console.dir(response);
-				}
-			});
-		}
-	}
-);
+	);
+}
 </script>
 
-<!-- Making a call -->
+<!-- Make a REST call -->
 <script>
-function handleClick () {
+function postMessage () {
 	yam.getLoginStatus(
 		function(response) {
 			if (response.authResponse) {
@@ -78,6 +65,7 @@ function handleClick () {
   );
 </script> -->
 
-<p><a href="#" onclick="handleClick()">can you hear me?</a></p>
+<p><a href="#" onclick="logInToYammer()">Log In With Yammer</a></p>
+<p><a href="#" onclick="postMessage()">Post a Message</a></p>
 
 <span id="yammer-login"></span>
