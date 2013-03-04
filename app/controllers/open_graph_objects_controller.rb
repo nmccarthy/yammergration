@@ -47,11 +47,10 @@ class OpenGraphObjectsController < ApplicationController
   # POST /open_graph_objects.json
   def create
     @open_graph_object = OpenGraphObject.new(params[:open_graph_object])
-    logger.debug("something amazing")
 
     respond_to do |format|
       if @open_graph_object.save
-        format.html { redirect_to @open_graph_objects, notice: 'Open graph object was successfully created.' }
+        format.html { redirect_to '/open_graph_objects', notice: 'Open graph object was successfully created.' }
         format.json { render json: @open_graph_object, status: :created, location: @open_graph_object }
       else
         format.html { render action: "new" }
