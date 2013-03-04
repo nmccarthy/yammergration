@@ -51,7 +51,7 @@ class OpenGraphObjectsController < ApplicationController
 
     respond_to do |format|
       if @open_graph_object.save
-        format.html { redirect_to @open_graph_object, notice: 'Open graph object was successfully created.' }
+        format.html { redirect_to @open_graph_objects, notice: 'Open graph object was successfully created.' }
         format.json { render json: @open_graph_object, status: :created, location: @open_graph_object }
       else
         format.html { render action: "new" }
