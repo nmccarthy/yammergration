@@ -10,9 +10,9 @@
   <% if yield(:og_url) != "" %><meta property="og:url" content="<%= yield(:og_url) %>"><% end %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-
-  <script data-app-id="TPW2XBfKLHdXqHMhldJdIw" src="https://assets.staging.yammer.com/platform/yam.js"></script>
   <%= csrf_meta_tags %>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 </head>
 <body>
 

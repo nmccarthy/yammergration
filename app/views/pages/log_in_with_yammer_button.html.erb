@@ -1,0 +1,11 @@
+<script data-app-id="<%= @yammergration_yammer_production_client_id %>" src="https://assets.yammer.com/platform/yam.js"></script>
+
+<script>
+  yam.connect.loginButton('#logInStatus', function (resp) {
+    if (resp.authResponse) {
+		loggedInNotice();
+	}
+  });
+</script>
+
+<span id="logInStatus"></span>

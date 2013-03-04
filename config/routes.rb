@@ -7,10 +7,12 @@ Yammergration::Application.routes.draw do
   match '/twitter/login' => 'pages#twitter_login'
   match '/google/login' => 'pages#google_login'
   match '/sandbox' => 'pages#sandbox'
+  match '/client_side_flow' => 'pages#client_side_flow'
+  match '/client_side_flow_staging' => 'pages#client_side_flow_staging'
+  match '/log_in_with_yammer_button' => 'pages#log_in_with_yammer_button'
+  match '/log_in_with_yammer_button_staging' => 'pages#log_in_with_yammer_button_staging'
 
   resources :open_graph_objects
-
-  match '/client_side_flow' => 'pages#client_side_flow'
 
   #Omniauth routes
   match 'auth/:provider/callback', to: 'sessions#create'

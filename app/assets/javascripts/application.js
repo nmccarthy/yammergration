@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+//Login status style changes
+function loggedInNotice () {
+	$('#logInStatus').css("color", "#12842d");
+	$('#logInStatus').css("background-color", "#27db51");
+	$('#logInStatus').css("border", "solid 2px #12842d");
+	$('#logInStatus').text("You are logged in with Yammergration.");
+}
+
+function loggedOutNotice () {
+	$('#logInStatus').css("color", "#be102c");
+	$('#logInStatus').css("background-color", "#f94b68");
+	$('#logInStatus').css("border", "solid 2px #be102c");
+	$('#logInStatus').text("You are not logged in with Yammergration.");
+}

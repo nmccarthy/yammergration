@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+#logInStatus {
+	width: 300px;
+	text-align: center;
+}
