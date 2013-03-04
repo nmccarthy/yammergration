@@ -15,8 +15,9 @@
   <tr>
     <td><%= open_graph_object.title %></td>
 	<td><%= open_graph_object.og_site_name %></td>
-    <td><%= link_to 'Show', open_graph_object %></td>
-    <td><%= link_to 'Edit', edit_open_graph_object_path(open_graph_object) %></td>
+    <td><%= link_to 'Prod', open_graph_object %> | </td>
+    <td><%= link_to 'Staging', 'open_graph_objects/' + open_graph_object.id.to_s + '?staging=true' %> | </td>
+    <td><%= link_to 'Edit', edit_open_graph_object_path(open_graph_object) %> | </td>
     <td><%= link_to 'Destroy', open_graph_object, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

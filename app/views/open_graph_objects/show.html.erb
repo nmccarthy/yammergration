@@ -1,3 +1,9 @@
+<% if @staging %>
+	<script data-app-id="<%= @yammergration_yammer_staging_client_id %>" src="https://assets.staging.yammer.com/platform/yam.js"></script>
+<% else %>
+	<script data-app-id="<%= @yammergration_yammer_production_client_id %>" src="https://assets.yammer.com/platform/yam.js"></script>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <% content_for :title, @open_graph_object.title %>
