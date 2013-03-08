@@ -4,11 +4,11 @@ class PagesController < ApplicationController
   end
 
   def client_side_flow
-    @yammergration_yammer_production_client_id = client_app_credentials('yammergration_yammer_production_client_id')
+    @yammergration_yammer_production_client_id = client_configurations('yammergration_yammer_production_client_id')
   end
 
   def client_side_flow_staging
-    @yammergration_yammer_staging_client_id = client_app_credentials('yammergration_yammer_staging_client_id')
+    @yammergration_yammer_staging_client_id = client_configurations('yammergration_yammer_staging_client_id')
   end
 
   def yammer_login
