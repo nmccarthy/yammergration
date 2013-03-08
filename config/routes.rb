@@ -11,6 +11,7 @@ Yammergration::Application.routes.draw do
   match '/client_side_flow_staging' => 'pages#client_side_flow_staging'
   match '/log_in_with_yammer_button' => 'pages#log_in_with_yammer_button'
   match '/log_in_with_yammer_button_staging' => 'pages#log_in_with_yammer_button_staging'
+  match '/facebook/javascript_api' => 'pages#facebook_javascript_api'
 
   resources :open_graph_objects
   match '/open_graph_objects/show_in_staging/:id' => 'open_graph_objects#show_in_staging'

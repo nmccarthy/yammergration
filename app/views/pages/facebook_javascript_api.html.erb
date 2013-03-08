@@ -1,0 +1,77 @@
+<h1>Facebook Javascript API</h1>
+
+<div id="fb-root"></div>
+
+<script>
+  // Additional JS functions here
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : <%= @yammergration_facebook_client_id %>, // App ID
+      channelUrl : '<%= @yammergration_facebook_channel_url %>', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+	FB.getLoginStatus(function(response) {
+	  if (response.status === 'connected') {
+		console.log(response);
+	    loggedInNotice();
+	  } else if (response.status === 'not_authorized') {
+	    loggedOutNotice();
+	  } else {
+	    loggedOutNotice();
+	  }
+	 });
+
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+
+	function logInToFacebook() {
+	    FB.login(function(response) {
+	        if (response.authResponse) {
+	            console.log(response);
+				loggedInNotice();
+	        } else {
+	            loggedOutNotice();
+	        }
+	    });
+	}
+
+	function logOutOfFacebook() {
+	    FB.logout(function(response) {
+			loggedOutNotice();
+	    });
+	}
+
+	function testAPI() {
+		FB.getLoginStatus(function(response) {
+		  if (response.status === 'connected') {
+		    loggedInNotice();
+		    FB.api('/me', function(response) {
+				console.log(response);
+		        alert('Good to see you, ' + response.name + '.');
+		    });
+		  } else if (response.status === 'not_authorized') {
+		    loggedOutNotice();
+			alert("You can't make a request because you're not logged in.");
+		  } else {
+		    loggedOutNotice();
+			alert("You can't make a request because you're not logged in.");
+		  }
+		 });
+	}
+</script>
+
+<p id="logInStatus"></p>
+<p><a href="#" onclick="logInToFacebook()">Log In With Facebook</a></p>
+<p><a href="#" onclick="logOutOfFacebook()">Log Out Of Facebook</a></p>
+<p><a href="#" onclick="testAPI()">GET from Graph API</a></p>

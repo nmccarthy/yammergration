@@ -12,6 +12,8 @@ gem 'omniauth-yammer-staging', :git => "https://github.com/nmccarthy/omniauth-ya
 gem 'omniauth-twitter'
 gem 'omniauth-google'
 
+gem 'koala'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
