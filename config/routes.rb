@@ -12,13 +12,14 @@ Yammergration::Application.routes.draw do
   match '/log_in_with_yammer_button' => 'pages#log_in_with_yammer_button'
   match '/log_in_with_yammer_button_staging' => 'pages#log_in_with_yammer_button_staging'
   match '/facebook/javascript_api' => 'pages#facebook_javascript_api'
+  match '/login_failure' => 'pages#login_failure'
 
   resources :open_graph_objects
   match '/open_graph_objects/show_in_staging/:id' => 'open_graph_objects#show_in_staging'
 
   #Omniauth routes
   match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
+  match 'auth/failure', to: redirect('/login_failure')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
   # The priority is based upon order of creation:

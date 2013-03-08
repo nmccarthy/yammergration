@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def create
+
     auth = request.env["omniauth.auth"]
     user = User.create_with_omniauth(auth)
     redirect_to '/login_success?user_id=' + user.id.to_s, :notice => "Signed in!"

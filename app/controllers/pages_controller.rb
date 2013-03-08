@@ -17,6 +17,9 @@ class PagesController < ApplicationController
   def login_success
     @user = User.find(params[:user_id])
   end
+  
+  def login_failure
+  end
 
   def facebook_login
   end
