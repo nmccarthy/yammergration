@@ -13,8 +13,8 @@ class OpenGraphObjectsController < ApplicationController
   # GET /open_graph_objects/1
   # GET /open_graph_objects/1.json
   def show
-    @yammergration_yammer_staging_client_id = client_app_credentials('yammergration_yammer_staging_client_id')
-    @yammergration_yammer_production_client_id = client_app_credentials('yammergration_yammer_production_client_id')
+    @yammergration_yammer_staging_client_id = client_configurations('yammergration_yammer_staging_client_id')
+    @yammergration_yammer_production_client_id = client_configurations('yammergration_yammer_production_client_id')
 
     @open_graph_object = OpenGraphObject.find(params[:id])
     if params[:staging]

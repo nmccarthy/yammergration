@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  helper_method :client_app_credentials
+  helper_method :client_configurations
 
   def client_configurations(app_choice)
     case app_choice
