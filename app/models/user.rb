@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.oauth_token = auth["credentials"]["token"]      
-      user.name = auth["info"]["full_name"] || auth["info"]["name"] # for yammer prod, the name shows up in full name. maybe difference in strategy versions or something.
+      user.name = auth["info"]["full_name"] || auth["info"]["name"] || auth["info"]["nickname"] # for yammer prod, the name shows up in full name. maybe difference in strategy versions or something.
     end
   end
 

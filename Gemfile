@@ -11,6 +11,7 @@ gem 'omniauth-yammer'
 gem 'omniauth-yammer-staging', :git => "https://github.com/nmccarthy/omniauth-yammer-staging.git"
 gem 'omniauth-twitter'
 gem 'omniauth-google'
+gem 'omniauth-box'
 
 gem 'koala'
 

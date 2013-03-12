@@ -6,6 +6,7 @@ Yammergration::Application.routes.draw do
   match '/facebook/login' => 'pages#facebook_login'
   match '/twitter/login' => 'pages#twitter_login'
   match '/google/login' => 'pages#google_login'
+  match '/box/login' => 'pages#box_login'
   match '/sandbox' => 'pages#sandbox'
   match '/client_side_flow' => 'pages#client_side_flow'
   match '/client_side_flow_staging' => 'pages#client_side_flow_staging'

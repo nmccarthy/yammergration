@@ -6,4 +6,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :facebook, ENV['YAMMERGRATION_FACEBOOK_CLIENT_ID'], ENV['YAMMERGRATION_FACEBOOK_CLIENT_SECRET'], {:scope => 'email, user_status, friends_status'}
   provider :yammer, ENV['YAMMERGRATION_YAMMER_PRODUCTION_CLIENT_ID'], ENV['YAMMERGRATION_YAMMER_PRODUCTION_CLIENT_SECRET']
   provider :yammer_staging, ENV['YAMMERGRATION_YAMMER_STAGING_CLIENT_ID'], ENV['YAMMERGRATION_YAMMER_STAGING_CLIENT_SECRET']
+  provider :box, ENV['YAMMERGRATION_BOX_CLIENT_ID'] # no secret? ENV['YAMMERGRATION_BOX_CLIENT_SECRET']
 end

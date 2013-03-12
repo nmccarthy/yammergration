@@ -24,6 +24,9 @@ class PagesController < ApplicationController
   def facebook_login
   end
   
+  def box_login    
+  end
+  
   def log_in_with_yammer_button
     @yammergration_yammer_production_client_id = client_configurations('yammergration_yammer_production_client_id')
   end

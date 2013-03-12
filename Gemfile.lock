@@ -37,6 +37,8 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.3)
     arel (3.0.2)
+    box-api (0.2.2)
+      httmultiparty (~> 0.3.6)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -52,6 +54,12 @@ GEM
       multipart-post (~> 1.1)
     hashie (1.2.0)
     hike (1.2.1)
+    httmultiparty (0.3.8)
+      httparty (>= 0.7.3)
+      multipart-post
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     httpauth (0.2.0)
     i18n (0.6.1)
     journey (1.0.4)
@@ -71,6 +79,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.7)
+    multi_xml (0.5.3)
     multipart-post (1.1.5)
     oauth (0.4.7)
     oauth2 (0.8.0)
@@ -82,6 +91,9 @@ GEM
     omniauth (1.1.1)
       hashie (~> 1.2)
       rack
+    omniauth-box (0.0.1)
+      box-api
+      omniauth (~> 1.0)
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
     omniauth-google (1.0.2)
@@ -152,6 +164,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   koala
+  omniauth-box
   omniauth-facebook
   omniauth-google
   omniauth-twitter
