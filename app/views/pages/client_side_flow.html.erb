@@ -26,7 +26,7 @@ function logInToYammer() {
 	yam.getLoginStatus(
 		function(response) {
 			if (response.authResponse) {
-				loggedInNotice();
+				alreadyLoggedIn();
 				console.dir(response);
 			}
 			else {

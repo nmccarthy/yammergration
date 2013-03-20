@@ -16,6 +16,11 @@
 
 
 //Login status style changes
+function alreadyLoggedIn () {
+	loggedInNotice();
+	alert('You are already logged in.');
+}
+
 function loggedInNotice () {
 	$('#logInStatus').css("color", "#12842d");
 	$('#logInStatus').css("background-color", "#27db51");
