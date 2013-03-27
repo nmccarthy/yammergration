@@ -10,6 +10,7 @@ Yammergration::Application.routes.draw do
   match '/sandbox' => 'pages#sandbox'
   match '/client_side_flow' => 'pages#client_side_flow'
   match '/client_side_flow_staging' => 'pages#client_side_flow_staging'
+  match '/client_side_flow_thunderdome' => 'pages#client_side_flow_thunderdome'
   match '/log_in_with_yammer_button' => 'pages#log_in_with_yammer_button'
   match '/log_in_with_yammer_button_staging' => 'pages#log_in_with_yammer_button_staging'
   match '/facebook/javascript_api' => 'pages#facebook_javascript_api'

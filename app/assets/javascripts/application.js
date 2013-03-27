@@ -59,9 +59,10 @@ function printyamLoginResponse() {
 				alreadyLoggedIn();
 				console.dir(response);
 			}
-			else {
+			else {    //authResponse was not true, which is bad news
 				loggedOutNotice();
 				yam.login(function (response) {
+					console.dir(response);
 					if (response.authResponse) {
 						loggedInNotice();
 						console.dir(response);
