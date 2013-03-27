@@ -34,3 +34,43 @@ function loggedOutNotice () {
 	$('#logInStatus').css("border", "solid 2px #be102c");
 	$('#logInStatus').text("You are not logged in with Yammergration.");
 }
+
+function printCheckLoginStatusResponse() {
+	yam.getLoginStatus(
+		function(response) {
+			if (response.authResponse) {
+				$(document).ready(function() {
+					console.dir(response);
+				});
+			}
+			else {
+				$(document).ready(function() {
+					alreadyLoggedIn();
+				});
+			}
+		}
+	);
+}
+
+function printyamLoginResponse() {
+	yam.getLoginStatus(
+		function(response) {
+			if (response.authResponse) {
+				alreadyLoggedIn();
+				console.dir(response);
+			}
+			else {
+				loggedOutNotice();
+				yam.login(function (response) {
+					if (response.authResponse) {
+						loggedInNotice();
+						console.dir(response);
+					}
+					else {
+						loggedOutNotice();
+					}
+				});
+			}
+		}
+	);
+}
