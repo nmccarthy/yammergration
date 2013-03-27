@@ -21,6 +21,11 @@ function alreadyLoggedIn () {
 	alert('You are already logged in.');
 }
 
+function notLoggedIn () {
+	loggedOutNotice();
+	alert('You are not logged in.');
+}
+
 function loggedInNotice () {
 	$('#logInStatus').css("color", "#12842d");
 	$('#logInStatus').css("background-color", "#27db51");
@@ -41,11 +46,18 @@ function printCheckLoginStatusResponse() {
 			if (response.authResponse) {
 				$(document).ready(function() {
 					console.dir(response);
+					console.log("access token (not nested):" + response.access_token.token)
+					if (response.access_token.access_token) {
+						console.log("access token (nested):" + response.access_token.access_token.token)
+					}
+					else {
+						console.log("nested token is undefined");
+					}
 				});
 			}
 			else {
 				$(document).ready(function() {
-					alreadyLoggedIn();
+					notLoggedIn();
 				});
 			}
 		}
@@ -58,14 +70,27 @@ function printyamLoginResponse() {
 			if (response.authResponse) {
 				alreadyLoggedIn();
 				console.dir(response);
+				console.log("access token (not nested):" + response.access_token.token)
+				if (response.access_token.access_token) {
+					console.log("access token (nested):" + response.access_token.access_token.token)
+				}
+				else {
+					console.log("nested token is undefined");
+				}
 			}
-			else {    //authResponse was not true, which is bad news
+			else {
 				loggedOutNotice();
 				yam.login(function (response) {
 					console.dir(response);
 					if (response.authResponse) {
 						loggedInNotice();
-						console.dir(response);
+						console.log("access token (not nested):" + response.access_token.token)
+						if (response.access_token.access_token) {
+							console.log("access token (nested):" + response.access_token.access_token.token)
+						}
+						else {
+							console.log("nested token is undefined");
+						}
 					}
 					else {
 						loggedOutNotice();
