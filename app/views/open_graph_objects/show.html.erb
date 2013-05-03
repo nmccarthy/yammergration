@@ -207,14 +207,14 @@
 	<script>yam.connect.actionButton({
 	  container: "#embed-like",
 	  action: "like",
-	  <% if @open_graph_object.embedlike_network != "" %>network: "<%= @open_graph_object.embedlike_network %>",<% end %>
+	  <% if @open_graph_object.embedlike_network %>network: "<%= @open_graph_object.embedlike_network %>",<% end %>
 
-	  <% if @open_graph_object.embedlike_op_url != "" || @open_graph_object.embedlike_op_type != "" || @open_graph_object.embedlike_op_title != "" || @open_graph_object.embedlike_op_image != "" %>
+	  <% if @open_graph_object.embedlike_op_url || @open_graph_object.embedlike_op_type || @open_graph_object.embedlike_op_title || @open_graph_object.embedlike_op_image %>
 	  objectProperties: {
-		<% if @open_graph_object.embedlike_op_url != "" %>url: "<%= @open_graph_object.embedlike_op_url %>",<% end %>
-		<% if @open_graph_object.embedlike_op_type != "" %>type: "<%= @open_graph_object.embedlike_op_type %>",<% end %>
-		<% if @open_graph_object.embedlike_op_title != "" %>title: "<%= @open_graph_object.embedlike_op_title %>",<% end %>
-		<% if @open_graph_object.embedlike_op_image != "" %>image: "<%= @open_graph_object.embedlike_op_image %>",<% end %>
+		<% if @open_graph_object.embedlike_op_url %>url: "<%= @open_graph_object.embedlike_op_url %>",<% end %>
+		<% if @open_graph_object.embedlike_op_type %>type: "<%= @open_graph_object.embedlike_op_type %>",<% end %>
+		<% if @open_graph_object.embedlike_op_title %>title: "<%= @open_graph_object.embedlike_op_title %>",<% end %>
+		<% if @open_graph_object.embedlike_op_image %>image: "<%= @open_graph_object.embedlike_op_image %>",<% end %>
 	  }
 	  <% end %>
 	});</script>
@@ -222,14 +222,14 @@
 	<script>yam.connect.actionButton({
 	  container: "#embed-follow",
 	  action: "follow",
-	  <% if @open_graph_object.embedfollow_network != "" %>network: "<%= @open_graph_object.embedfollow_network %>",<% end %>
+	  <% if @open_graph_object.embedfollow_network %>network: "<%= @open_graph_object.embedfollow_network %>",<% end %>
 
-	  <% if @open_graph_object.embedfollow_op_url != "" || @open_graph_object.embedfollow_op_type != "" || @open_graph_object.embedfollow_op_title != "" || @open_graph_object.embedfollow_op_image != "" %>
+	  <% if @open_graph_object.embedfollow_op_url || @open_graph_object.embedfollow_op_type || @open_graph_object.embedfollow_op_title || @open_graph_object.embedfollow_op_image %>
 	  objectProperties: {
-		<% if @open_graph_object.embedfollow_op_url != "" %>url: "<%= @open_graph_object.embedfollow_op_url %>",<% end %>
-		<% if @open_graph_object.embedfollow_op_type != "" %>type: "<%= @open_graph_object.embedfollow_op_type %>",<% end %>
-		<% if @open_graph_object.embedfollow_op_title != "" %>title: "<%= @open_graph_object.embedfollow_op_title %>",<% end %>
-		<% if @open_graph_object.embedfollow_op_image != "" %>image: "<%= @open_graph_object.embedfollow_op_image %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_url %>url: "<%= @open_graph_object.embedfollow_op_url %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_type %>type: "<%= @open_graph_object.embedfollow_op_type %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_title %>title: "<%= @open_graph_object.embedfollow_op_title %>",<% end %>
+		<% if @open_graph_object.embedfollow_op_image %>image: "<%= @open_graph_object.embedfollow_op_image %>",<% end %>
 	  }
 	  <% end %>
 	});</script>
@@ -237,14 +237,14 @@
 	<script>yam.connect.embedFeed({
 	  container: "#embed-feed",
 	  feedType: "open-graph",
-	  <% if @open_graph_object.embedfeed_network != "" %>network: "<%= @open_graph_object.embedfeed_network %>",<% end %>
+	  <% if @open_graph_object.embedfeed_network %>network: "<%= @open_graph_object.embedfeed_network %>",<% end %>
 
-	  <% if @open_graph_object.embedfeed_op_url != "" || @open_graph_object.embedfeed_op_type != "" || @open_graph_object.embedfeed_op_title != "" || @open_graph_object.embedfeed_op_image != "" %>
+	  <% if @open_graph_object.embedfeed_op_url || @open_graph_object.embedfeed_op_type || @open_graph_object.embedfeed_op_title || @open_graph_object.embedfeed_op_image %>
 	  objectProperties: {
-		<% if @open_graph_object.embedfeed_op_url != "" %>url: "<%= @open_graph_object.embedfeed_op_url %>",<% end %>
-		<% if @open_graph_object.embedfeed_op_type != "" %>type: "<%= @open_graph_object.embedfeed_op_type %>",<% end %>
-		<% if @open_graph_object.embedfeed_op_title != "" %>title: "<%= @open_graph_object.embedfeed_op_title %>",<% end %>
-		<% if @open_graph_object.embedfeed_op_image != "" %>image: "<%= @open_graph_object.embedfeed_op_image %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_url %>url: "<%= @open_graph_object.embedfeed_op_url %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_type %>type: "<%= @open_graph_object.embedfeed_op_type %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_title %>title: "<%= @open_graph_object.embedfeed_op_title %>",<% end %>
+		<% if @open_graph_object.embedfeed_op_image %>image: "<%= @open_graph_object.embedfeed_op_image %>",<% end %>
 	  }
 	  <% end %>
 	});</script>
